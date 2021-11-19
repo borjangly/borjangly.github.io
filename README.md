@@ -1,2 +1,0 @@
-# borjangly.github.io
-Stuff
