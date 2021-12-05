@@ -38,14 +38,14 @@
            document.getElementsByName("total")[0].value = beans;
          }
          function total2() {
-           var input = document.getElementsByName("boss2");
+           var input2 = document.getElementsByName("boss2");
            var beans2 = 0;
-           for (var i = 0; i < input.length; i++) {
-             if (input[i].checked) {
-               beans += parseFloat(input[i].value);
+           for (var i = 0; i < input2.length; i++) {
+             if (input2[i].checked) {
+               beans2 += parseFloat(input2[i].value);
              }
            }
-           document.getElementsByName("total2")[0].value = beans;
+           document.getElementsByName("total2")[0].value = beans2;
          }
          
       </script>
@@ -365,5 +365,8 @@
             </div>
          </div>
       </div>
+      <br>
+      <br>
+      <a href="https://github.com/borjangly/borjangly.github.io/blob/master/boss-points.html" style="font-family:verdana;">Repo link</a>
    </body>
 </html>
