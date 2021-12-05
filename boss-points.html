@@ -1,83 +1,355 @@
 <!DOCTYPE html>
 <html>
-<body>
-
-<h2>Black Bean Points</h2>
-
-<script>
-function total() {
-  var input = document.getElementsByName("boss");
-  var beans = 0;
-  for (var i = 0; i < input.length; i++) {
-    if (input[i].checked) {
-      beans += parseFloat(input[i].value);
-    }
-  }
-  document.getElementsByName("total")[0].value = beans;
-}
-
-</script>
-
-<br>
-<input name="boss" value="5" type="checkbox" onclick="total()" /> Hilla (Hard)
-<br>
-<input name="boss" value="5" type="checkbox" onclick="total()" /> Pink Bean (Chaos)
-<br>
-<input name="boss" value="5" type="checkbox" onclick="total()" /> Cygnus (Easy)
-<br>
-<input name="boss" value="5" type="checkbox" onclick="total()" /> Cygnus (Normal - Duu is a snitch)
-<br>
-<input name="boss" value="10" type="checkbox" onclick="total()" /> Zakum (Chaos)
-<br>
-<input name="boss" value="10" type="checkbox" onclick="total()" /> Pierre (Chaos)
-<br>
-<input name="boss" value="10" type="checkbox" onclick="total()" /> Von Bon (Chaos)
-<br>
-<input name="boss" value="10" type="checkbox" onclick="total()" /> Crimson Queen (Chaos)
-<br>
-<input name="boss" value="10" type="checkbox" onclick="total()" /> Princess No (Bitch)
-<br>
-<input name="boss" value="20" type="checkbox" onclick="total()" /> Magnus (Hard)
-<br>
-<input name="boss" value="20" type="checkbox" onclick="total()" /> Vellum (Chaos)
-<br>
-<input name="boss" value="30" type="checkbox" onclick="total()" /> Papulatus (Chaos)
-<br>
-<input name="boss" value="30" type="checkbox" onclick="total()" /> Lotus (Normal)
-<br>
-<input name="boss" value="30" type="checkbox" onclick="total()" /> Damien (Normal)
-<br>
-<input name="boss" value="30" type="checkbox" onclick="total()" /> Lucid (Easy)
-<br>
-<input name="boss" value="30" type="checkbox" onclick="total()" /> Mitsuhide
-<br>
-<input name="boss" value="40" type="checkbox" onclick="total()" /> Lucid (Normal)
-<br>
-<input name="boss" value="40" type="checkbox" onclick="total()" /> Will (Normal)
-<br>
-<input name="boss" value="40" type="checkbox" onclick="total()" /> Gloom (Normal)
-<br>
-<input name="boss" value="40" type="checkbox" onclick="total()" /> Darknell (Normal) 
-<br>
-<input name="boss" value="60" type="checkbox" onclick="total()" /> Lotus (Hard)
-<br>
-<input name="boss" value="60" type="checkbox" onclick="total()" /> Damien (Hard)
-<br>
-<input name="boss" value="60" type="checkbox" onclick="total()" /> Lucid (Hard)
-<br>
-<input name="boss" value="60" type="checkbox" onclick="total()" /> Will (Hard)
-<br>
-<input name="boss" value="70" type="checkbox" onclick="total()" /> Gloom (Chaos)
-<br>
-<input name="boss" value="70" type="checkbox" onclick="total()" /> Darknell (Hard) 
-<br>
-<input name="boss" value="70" type="checkbox" onclick="total()" /> Versus Hilla
-<br>
-<input name="boss" value="70" type="checkbox" onclick="total()" /> Seren (Boss Bitch)
-<br>
-<br> Total (goes over 400):
-<br>
-<input value="0" readonly="readonly" type="text" name="total" />
-
-</body>
+   <head>
+      <title>Title of the document</title>
+      <style>
+         input.bigcheckbox {
+         width: 25px;
+         height: 25px;
+         }
+         table {
+         font-family: verdana, sans-serif;
+         border-collapse: collapse;
+         width: 100%;
+         }
+         td, th {
+         border: 1px solid #757678;
+         text-align: center;
+         padding: 0.5px;
+         }
+         tr:nth-child(even) {
+         background-color: #757678;
+         }
+         h2.textstyle {
+         font-family: verdana
+         }
+      </style>
+   </head>
+   <body style="background-color:#dddddd;">
+      <script>
+         function total() {
+           var input = document.getElementsByName("boss");
+           var beans = 0;
+           for (var i = 0; i < input.length; i++) {
+             if (input[i].checked) {
+               beans += parseFloat(input[i].value);
+             }
+           }
+           document.getElementsByName("total")[0].value = beans;
+         }
+         
+      </script>
+      <h2 class="textstyle">Black Bean Points</h2>
+      <span style="font-family:verdana;font-size:20px">An extra table is provided for comparing different boss clear configurations</span>
+      <br>
+      <br>
+      <div style="width: 100%; overflow: hidden;">
+         <div style="display: table-row">
+            <div style="width: 600px; float: left;">
+               <table>
+                  <tr>
+                     <th></th>
+                     <th>Boss</th>
+                     <th>Points</th>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="5" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Hilla (Hard)</td>
+                     <td>5</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="5" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Pink Bean (Chaos)</td>
+                     <td>5</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="5" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Cygnus (Easy)</td>
+                     <td>5</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="5" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td><span title="Duu is a snitch">Cygnus (Normal)</span></td>
+                     <td>5</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="10" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Zakum (Chaos)</td>
+                     <td>10</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="10" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Pierre (Chaos)</td>
+                     <td>10</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="10" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Von Bon (Chaos)</td>
+                     <td>10</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="10" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Crimson Queen (Chaos)</td>
+                     <td>10</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="10" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td><span title="Duu is a snitch">Princess No</span></td>
+                     <td>10</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="20" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Magnus (Hard)</td>
+                     <td>20</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="20" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Vellum (Chaos)</td>
+                     <td>20</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="30" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Papulatus (Chaos)</td>
+                     <td>30</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="30" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Mitsuhide</td>
+                     <td>30</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="30" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Lotus (Normal)</td>
+                     <td>30</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="30" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Damien (Normal)</td>
+                     <td>30</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="30" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Lucid (Easy)</td>
+                     <td>30</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="40" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Lucid (Normal)</td>
+                     <td>40</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="40" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Will (Normal)</td>
+                     <td>40</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="40" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Gloom (Normal)</td>
+                     <td>40</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="40" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Darknell (Normal)</td>
+                     <td>40</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="60" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Lotus (Hard)</td>
+                     <td>60</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="60" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Damien (Hard)</td>
+                     <td>60</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="60" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Lucid (Hard)</td>
+                     <td>60</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="60" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Will (Hard)</td>
+                     <td>60</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="70" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Gloom (Chaos)</td>
+                     <td>70</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="70" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Darknell (Hard)</td>
+                     <td>70</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="70" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Versus Hilla</td>
+                     <td>70</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="70" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Seren</td>
+                     <td>70</td>
+                  </tr>
+               </table>
+               <br>
+               <b style="font-family:verdana;font-size:24px">Total (goes over 400): </b>
+               <input value="0" readonly="readonly" type="text" name="total" style="font-family:verdana;font-size:24px;text-align:center;" size="10" />
+            </div>
+            <div style="margin-left: 650px;width:600px;">
+               <table>
+                  <tr>
+                     <th></th>
+                     <th>Boss</th>
+                     <th>Points</th>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="5" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Hilla (Hard)</td>
+                     <td>5</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="5" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Pink Bean (Chaos)</td>
+                     <td>5</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="5" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Cygnus (Easy)</td>
+                     <td>5</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="5" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td><span title="Duu is a snitch">Cygnus (Normal)</span></td>
+                     <td>5</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="10" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Zakum (Chaos)</td>
+                     <td>10</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="10" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Pierre (Chaos)</td>
+                     <td>10</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="10" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Von Bon (Chaos)</td>
+                     <td>10</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="10" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Crimson Queen (Chaos)</td>
+                     <td>10</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="10" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td><span title="Duu is a snitch">Princess No</span></td>
+                     <td>10</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="20" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Magnus (Hard)</td>
+                     <td>20</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="20" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Vellum (Chaos)</td>
+                     <td>20</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="30" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Papulatus (Chaos)</td>
+                     <td>30</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="30" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Mitsuhide</td>
+                     <td>30</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="30" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Lotus (Normal)</td>
+                     <td>30</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="30" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Damien (Normal)</td>
+                     <td>30</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="30" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Lucid (Easy)</td>
+                     <td>30</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="40" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Lucid (Normal)</td>
+                     <td>40</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="40" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Will (Normal)</td>
+                     <td>40</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="40" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Gloom (Normal)</td>
+                     <td>40</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="40" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Darknell (Normal)</td>
+                     <td>40</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="60" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Lotus (Hard)</td>
+                     <td>60</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="60" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Damien (Hard)</td>
+                     <td>60</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="60" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Lucid (Hard)</td>
+                     <td>60</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="60" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Will (Hard)</td>
+                     <td>60</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="70" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Gloom (Chaos)</td>
+                     <td>70</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="70" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Darknell (Hard)</td>
+                     <td>70</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="70" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Versus Hilla</td>
+                     <td>70</td>
+                  </tr>
+                  <tr>
+                     <td><input name="boss" value="70" type="checkbox" class="bigcheckbox" onclick="total()" /></td>
+                     <td>Seren</td>
+                     <td>70</td>
+                  </tr>
+               </table>
+               <br>
+               <b style="font-family:verdana;font-size:24px">Total (goes over 400): </b>
+               <input value="0" readonly="readonly" type="text" name="total" style="font-family:verdana;font-size:24px;text-align:center;" size="10" /> 
+            </div>
+         </div>
+      </div>
+   </body>
 </html>
